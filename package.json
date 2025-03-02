@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^9.1.2",
+    "dotenv": "^16.4.7",
     "telegraf": "^4.16.3"
   },
   "devDependencies": {

@@ -1,10 +1,16 @@
 import { Telegraf } from "telegraf"
+import dotenv from "dotenv"
+dotenv.config()
 
-const BOT_TOKEN = "7273320452:AAFN3Qdb0o4H6Iysb8JI9d112g_IyfaSizs"
+const BOT_TOKEN = process.env.BOT_TOKEN || ""
+
+if (!BOT_TOKEN) {
+    throw new Error("Bot token is missing")
+}
 const bot = new Telegraf(BOT_TOKEN)
 
 bot.start((ctx) => {
-    ctx.reply("Welcome! send me a group order link to begin")
+    ctx.reply("Welcome! send me a group order link to begin, Paste ad lets fucking go")
 })
 
 bot.launch().then(() => {
