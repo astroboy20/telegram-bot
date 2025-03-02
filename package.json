@@ -4,17 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -w -p tsconfig.json",
+    "start": "nodemon src/index.js",
+    "dev": "concurrently \"npm:build:watch\" \"npm:start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^9.1.2",
     "telegraf": "^4.16.3"
   },
   "devDependencies": {
     "@types/node": "^22.13.8",
     "typescript": "^5.8.2"
   }
-  
 }
